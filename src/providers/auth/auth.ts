@@ -18,8 +18,12 @@ export class AuthProvider {
     return Parse.User.logIn(email, password);
   }
 
-  isLoggedIn() {
-    return Parse.User.current()
+  currentUser() {
+    return Parse.User.current();
+  }
+
+  logout() {
+    return Parse.User.logOut();
   }
 
 }
